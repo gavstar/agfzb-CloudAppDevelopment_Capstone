@@ -8,7 +8,7 @@ from cloudant.error import CloudantException
 import requests
 
 
-def main(param_dict):
+async def main(param_dict):
     """Main Function
 
     Args:
@@ -19,7 +19,7 @@ def main(param_dict):
     """
 
     try:
-        client = Cloudant.iam(
+        await client = Cloudant.iam(
             account_name=param_dict["COUCH_USERNAME"],
             api_key=param_dict["IAM_API_KEY"],
             connect=True,
